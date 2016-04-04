@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>my walk home</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+
+      #map {
+        display:block;
+        height: 1000px;
+        width: 1000px;
+      }
+
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+
+      var map;
+
+      var initialize = function() {
+        var mapOptions = {
+          zoom: 20,
+          center: new google.maps.LatLng(40.7090868,-74.0902451)
+        };
+
+
+        var map = new google.maps.Map(document.getElementById('map'),
+            mapOptions);
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas">
+      <section id="map"> </section>
+    </div>
+
+  </body>
+</html>
